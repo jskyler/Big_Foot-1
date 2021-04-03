@@ -2,6 +2,9 @@
   "name": "big_foot",
   "version": "1.0.0",
   "description": "Final project-Big Foot sightings",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -16,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/rebeccatast/Big_Foot/issues"
   },
-  "homepage": "https://github.com/rebeccatast/Big_Foot#readme"
+  "homepage": "https://github.com/rebeccatast/Big_Foot"
 }
