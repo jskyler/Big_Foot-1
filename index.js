@@ -8,15 +8,10 @@ var app = express();
 
 var server = http.Server(app);
 
-app.use(express.static('client'));
 
-app.set('view engine', 'ejs');
-
-server.listen(PORT, function(){
-    console.log('Site is running.');
-});
-
-
-app.get('/', function (req, res) {
-    res.render('pages/index');
-});
+app()
+    .use(express.static(path.join(__dirname, 'public')))
+    .set('views', path.join(__dirname, 'views'))
+    .set('view engine', 'ejs')
+    .get('/', (req, res) => res.render('pages/index'))
+    .listen(PORT,() => console.log(`Listening on ${ PORT }`))
