@@ -1,48 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="Resources/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Bigfoot Heatmap</title>
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-    <!-- Our CSS  -->
-    <link rel="stylesheet" href="Resources/css/style.css" />
-
-  </head>
+  <head><%- include('../partials/header') %></head>
 
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand p-2 text-secondary" href="index.html">Bigfoot Sightings</a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">Tableau Dashboard</a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link" href="machineLearning.html">Machine Learning</a>
-                </li>
-            <li class="nav-item">
-              <a class="nav-link" href="maps.html">Where is Bigfoot?</a>
-            </li>
-          </ul>
-        </div>
-
-  </nav>
+    <%- include('../partials/nav') %>
     <div id="map"></div>
 
     <!-- API key -->
-    <script type="text/javascript" src="Resources/js/config.js"></script>
+    <script type="text/javascript" src="/public/js/config.js"></script>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
@@ -50,9 +17,9 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     
     <!-- Leaflet heatmap plugin-->
-    <script type="text/javascript" src="Resources/js/leaflet-heat.js"></script>
+    <script type="text/javascript" src="/public/js/leaflet-heat.js"></script>
 
-    <script type="text/javascript" src="Resources/js/heatmap.js"></script>
+    <script type="text/javascript" src="/public/js/heatmap.js"></script>
 
   </body>
 
