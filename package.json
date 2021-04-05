@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Final project-Big Foot sightings",
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "npm": "14.x"
   },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/rebeccatast/Big_Foot/issues"
   },
-  "homepage": "https://github.com/rebeccatast/Big_Foot"
+  "homepage": "https://github.com/rebeccatast/Big_Foot",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
