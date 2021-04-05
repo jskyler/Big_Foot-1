@@ -12,6 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "repository": {
@@ -23,8 +24,5 @@
   "bugs": {
     "url": "https://github.com/rebeccatast/Big_Foot/issues"
   },
-  "homepage": "https://github.com/rebeccatast/Big_Foot",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/rebeccatast/Big_Foot"
 }
