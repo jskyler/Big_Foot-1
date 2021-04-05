@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
+# In[50]:
 
 
 import numpy as np
@@ -24,15 +24,15 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[12]:
+# In[51]:
 
 
-train_path ='//...Big_Foot/CNN_Model1/train/'
-valid_path ='//...Big_Foot/CNN_Model1/valid/'
-test_path = '//...Big_Foot/CNN_Model1/test/'
+train_path ='//users/rebeccatast/Desktop/Big_Foot/CNN_Model1/train/'
+valid_path ='//users/rebeccatast/Desktop/Big_Foot/CNN_Model1/valid/'
+test_path = '//users/rebeccatast/Desktop/Big_Foot/CNN_Model1/test/'
 
 
-# In[13]:
+# In[52]:
 
 
 train_batches = ImageDataGenerator(preprocessing_function=tf.keras.applications.vgg16.preprocess_input)     .flow_from_directory(directory=train_path, target_size=(224,224), classes= ['bigfoot','man'], batch_size=10)
@@ -40,22 +40,22 @@ valid_batches = ImageDataGenerator(preprocessing_function=tf.keras.applications.
 test_batches = ImageDataGenerator(preprocessing_function=tf.keras.applications.vgg16.preprocess_input)     .flow_from_directory(directory=test_path, target_size=(224,224), classes= ['bigfoot','man'], batch_size=10, shuffle=False)
 
 
-# In[14]:
+# In[54]:
 
 
-assert train_batches.n == 900
+assert train_batches.n == 800
 assert valid_batches.n == 250
-assert test_batches.n == 90
+assert test_batches.n == 120
 assert train_batches.num_classes == valid_batches.num_classes == test_batches.num_classes == 2
 
 
-# In[15]:
+# In[55]:
 
 
 imgs, labels = next(train_batches)
 
 
-# In[16]:
+# In[56]:
 
 
 def plotImages(images_arr):
@@ -68,14 +68,14 @@ def plotImages(images_arr):
     plt.show()
 
 
-# In[17]:
+# In[57]:
 
 
 plotImages(imgs)
 print(labels)
 
 
-# In[18]:
+# In[58]:
 
 
 model = Sequential ([
@@ -88,25 +88,25 @@ model = Sequential ([
 ])
 
 
-# In[19]:
+# In[59]:
 
 
 model.summary()
 
 
-# In[20]:
+# In[60]:
 
 
 model.compile(optimizer=Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
 
 
-# In[21]:
+# In[61]:
 
 
 model.fit(x=train_batches, validation_data=valid_batches, epochs=10, verbose=2)
 
 
-# In[22]:
+# In[62]:
 
 
 test_imgs, test_labels = next(test_batches)
@@ -114,31 +114,31 @@ plotImages(test_imgs)
 print(test_labels)
 
 
-# In[23]:
+# In[63]:
 
 
 test_batches.classes
 
 
-# In[24]:
+# In[64]:
 
 
 predictions = model.predict(x=test_batches, verbose=0)
 
 
-# In[25]:
+# In[65]:
 
 
 np.round(predictions)
 
 
-# In[27]:
+# In[66]:
 
 
 cm = confusion_matrix(y_true=test_batches.classes, y_pred=np.argmax(predictions, axis=-1))
 
 
-# In[32]:
+# In[67]:
 
 
 def plot_confusion_matrix(cm, classes, 
@@ -171,13 +171,13 @@ def plot_confusion_matrix(cm, classes,
     plt.xlabel('Predicted Label')
 
 
-# In[33]:
+# In[68]:
 
 
 test_batches.class_indices
 
 
-# In[34]:
+# In[69]:
 
 
 cm_plot_labels = ['bigfoot', 'man']
