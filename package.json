@@ -4,7 +4,7 @@
   "description": "Final project-Big Foot sightings",
   "engines": {
     "node": "14.x",
-    "npm": "14.x"
+    "npm": "6.x"
   },
   "main": "index.js",
   "scripts": {
