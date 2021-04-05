@@ -1,7 +1,12 @@
-var http = require('http');
 var PORT = process.env.PORT || 5000;
 
-var express = require('express');
+var http = require('http');
+var app = express();
 
-http.createServer(function (req, res) {
-}).listen(port);
+var server = http.Server(app);
+
+app.use(express.static('client'));
+
+server.listen(PORT, function(){
+    console.log('Site is running.');
+});
