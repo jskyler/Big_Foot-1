@@ -8,12 +8,17 @@ var app = express();
 
 var server = http.Server(app);
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('views', path.join(__dirname, 'views'));
+
+app.set('view engine', 'ejs');
+
 server.listen(PORT, function(){
     console.log('Site is running.');
 });
 
-app()
-    .use(express.static(path.join(__dirname, 'public')))
-    .set('views', path.join(__dirname, 'views'))
-    .set('view engine', 'ejs')
-    .get('/', (req, res) => res.render('pages/index'))
+
+app.get('/', function (req, res) {
+    res.render('pages/index');
+});
