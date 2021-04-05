@@ -8,7 +8,7 @@ var app = express();
 
 var server = http.Server(app);
 
-app.use(express.static('client'));
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
