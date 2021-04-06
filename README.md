@@ -1,6 +1,6 @@
 # Bigfoot: Man or Beast
 
-**Overview**
+**Overview*
 
 For generations, stories of an eight-foot-tall creature walking on two legs, roaming through the woods and forests in our very own back yards, struck fear and curiosity into our souls. Stories turned to legend, legend turned to myth, until one day in 1970 the cryptid came out from hiding. In recent times Bigfoot has been a subject of debate among skeptics and believers. The question is that with modern technology, and the fact that everyone has a phone with a camera, how has Bigfoot eluded us this long? On the other hand, how do we explain the thousands of sightings, from across the United States, of this mysterious creature?
 
