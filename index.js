@@ -9,7 +9,7 @@ var app = express();
 
 var server = http.Server(app);
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 
@@ -19,5 +19,9 @@ server.listen(PORT, function(){
 
 
 app.get('/', function (req, res) {
-    res.render('pages/index');
+    res.render('pages/index', {});
+});
+
+app.get('/maps', function(req, res) {
+    res.render('pages/maps', {});
 });
