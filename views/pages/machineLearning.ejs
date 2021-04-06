@@ -6,13 +6,13 @@
 </head>
 <body>
     <%- include('../partials/nav') %>
-    <div class="p-3 mb-2 bg-secondary text-white"></div>
+    <div class="p-3 mb-2 bg-secondary text-white">
     <h2 style="text-align: center" style="font-size:100px"> Bigfoot vs. Man Image Classification Using CNN</h2>
     <p style="text-align:center" style="font-size: 50px">Our goal for this machine learning project was to build a Convolutional Neural Network with the ability to classify images as either representing Bigfoot or man. While this project uses a relatively small data set (1170 pictures), it represents a first step in the building of a larger model that could help Cyrptozoologists and Bigfoot enthusiasts determine the credibility of their bigfoot sightings.</p>
     <h2 style="text-align:center" style="font-size:100px"> The Data</h2>
         <br>
         <br>
-        <img src="Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="400" height="300" syle = "margin: 2px 2px 2px 2px" alt="" class= "center" ><img src="Resources/Other_images/ML_Site_Pictures/manexample.png" width="400" height="300" syle = "margin: 2px 2px 2px 2px" alt="" class="center">
+        <img src="Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="500" height="400" style = "margin: 50px 50px 50px 50px" alt=""><img src="Resources/Other_images/ML_Site_Pictures/manexample.png" width="500" height="400" style = "margin: 50px 50px 50px 50px" alt="">
         <br>
         <br>
         <ul>
@@ -81,7 +81,7 @@
     <br>
     <h2 style="text-align:center"> Model 2 Overview</h2>
     <br>
-    <p style="text-align:center" style="font-size: 50px">Model 2 was set up in a nearly identical way to Model 1, with one major excetpion, the use of randomized data. In Model 1, the file structure containing the Train, Test, and Validation Groups was created by hand. In Model 2, we used the computer to create the file structure, randomzing the pictures that were put into each of the Train, Validate, and Test Groups. By the randomizer, we are able to remove any potential any creator error or bias in selecting the pictures for each group. The primary difference and outcome of Model 2 are highlighted below.</p>
+    <p style="font-size: 100px">Model 2 was set up in a nearly identical way to Model 1, with one major excetpion, the use of randomized data. In Model 1, the file structure containing the Train, Test, and Validation Groups was created by hand. In Model 2, we used the computer to create the file structure, randomzing the pictures that were put into each of the Train, Validate, and Test Groups. By the using randomizer function, we are able to remove any potential any creator error or bias in selecting the pictures for each group. The primary difference and outcome of Model 2 are highlighted below.</p>
     <br>
     <br>
     <ol>
@@ -103,5 +103,6 @@
             <img src="Resources/Other_images/ML_Site_Pictures/model2matrix.png" width="1200" height="700" alt="" class= "center">
     </ol>
     <%- include('../partials/footer') %>
+    </div>
 </body>
 </html>
