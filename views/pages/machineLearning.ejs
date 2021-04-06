@@ -6,38 +6,102 @@
 </head>
 <body>
     <%- include('../partials/nav') %>
-    <h2 style="text-align:center"> Bigfoot vs. Man</h2>
-    <p style="margin-left: 40px">Our goal for this machine learning project was to build a Convolutional Neural Network with the ability to classify images as either representing Bigfoot or man. While this project uses a relatively small data set (1170 pictures), it represents a first step in the building of a larger model that could help Cyrptozoologists and Bigfoot enthusiasts determine the credibility of their bigfoot sightings.</p>
-    <h2 style="text-align:center"> The Data</h2>
-    <div class="col-md-12 text-success">
-        <img src="Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="400" height="300" alt=""><img src="Resources/Other_images/ML_Site_Pictures/manexample.png" width="400" height="300" alt="">
-    </div>
-    <ul>
-        <li>1170 pictures (585 of Bigfoot, 585 of man)</li>
-        <li>Pictures found using Google Image searches, Pinterest, and <a href = "http://www.bigfootreality.com/img/sasketch/bsp_main.php"></a> Bigfoot Reality </a> </li> 
-        <li>Pictures were numbered sequentially as either bigfoot or man and saved as JPEG files (example: bigfoot1.jpg) </li>
+    <div class="p-3 mb-2 bg-secondary text-white"></div>
+    <h2 style="text-align: center" style="font-size:100px"> Bigfoot vs. Man Image Classification Using CNN</h2>
+    <p style="text-align:center" style="font-size: 50px">Our goal for this machine learning project was to build a Convolutional Neural Network with the ability to classify images as either representing Bigfoot or man. While this project uses a relatively small data set (1170 pictures), it represents a first step in the building of a larger model that could help Cyrptozoologists and Bigfoot enthusiasts determine the credibility of their bigfoot sightings.</p>
+    <h2 style="text-align:center" style="font-size:100px"> The Data</h2>
+        <br>
+        <br>
+        <img src="Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="400" height="300" syle = "margin: 2px 2px 2px 2px" alt="" class= "center" ><img src="Resources/Other_images/ML_Site_Pictures/manexample.png" width="400" height="300" syle = "margin: 2px 2px 2px 2px" alt="" class="center">
+        <br>
+        <br>
+        <ul>
+        <li style ="text-align:center" style="font-size: 50px">1170 pictures (585 of Bigfoot, 585 of man)</li>
+        <li style ="text-align:center" style="font-size: 50px">Pictures found using Google Image searches, Pinterest, and <a href = "http://www.bigfootreality.com/img/sasketch/bsp_main.php"></a> Bigfoot Reality </a> </li> 
+        <li style ="text-align:center" style="font-size: 50px">Pictures were numbered sequentially as either bigfoot or man and saved as JPEG files (example: bigfoot1.jpg) </li>
     </ul>
+    <br>
+    <br>
+    <br>
     <h2 style="text-align:center"> Model 1 Overview</h2>
+    <br>
     <ol>
-        <li> Create virtual environment with necessary dependencies. </li>
-            <img src="Resources/Other_images/ML_Site_Pictures/dependenciesexample.png" width="1200" height="400" alt="">
-        <li> Divide data into Train, Validate, and Test Groups and preprocess images.</li>
-            <img src="Resources/Other_images/ML_Site_Pictures/preprocessingimages.png" width="1200" height="250" alt="">
-        <li> Initial plot of a sample of images in the Train Group, showing how the computer begins to filter out layers of each picture.</li>
-            <img src="Resources/Other_images/ML_Site_Pictures/plotimages.png" width="1200" height="800" alt="">
-        <li> Build the model. </li>
-            <img src="Resources/Other_images/ML_Site_Pictures/ModelBuilding.png" width="1200" height="600" alt="">
-        <li> Run the model on the Train and Validate Groups of Data. </li>
-            <img src="Resources/Other_images/ML_Site_Pictures/modelrun.png" width="1200" height="550" alt="">
-        <li> Plot sample of images in the Test Group.</li>
-            <img src="Resources/Other_images/ML_Site_Pictures/testgroup.png" width="1200" height="700" alt="">
-        <li> Make Predictions Using the Test Group. </li>
-            <img src="Resources/Other_images/ML_Site_Pictures/testpredictions.png" width="1200" height="600" alt="">
-        <li> Visualize Predictions using a Confusion Matrix.  </li>
-            <img src="Resources/Other_images/ML_Site_Pictures/confusionmatrix1.png" width="1200" height="700" alt="">
-            <img src="Resources/Other_images/ML_Site_Pictures/confusionmatrix1_2.png" width="1200" height="700" alt="">
+        <li style ="text-align:center" style="font-size: 50px"> Create virtual environment with necessary dependencies. </li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/dependenciesexample.png" width="1200" height="400" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Divide data into Train, Validate, and Test Groups and preprocess images.</li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/preprocessingimages.png" width="1200" height="250" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Initial plot of a sample of images in the Train Group, showing how the computer begins to filter out layers of each picture.</li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/plotimages.png" width="1200" height="800" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Build the model. </li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/ModelBuilding.png" width="1200" height="600" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Run the model on the Train and Validate Groups of Data. </li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/modelrun.png" width="1200" height="550" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Plot sample of images in the Test Group.</li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/testgroup.png" width="1200" height="700" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Make Predictions Using the Test Group. </li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/testpredictions.png" width="1200" height="600" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Visualize of Predictions using a Confusion Matrix.  </li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/confusionmatrix1.png" width="1200" height="700" alt="" class= "center">
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/confusionmatrix1_2.png" width="1200" height="700" alt="" class= "center">
     </ol>
-3
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align:center"> Model 2 Overview</h2>
+    <br>
+    <p style="text-align:center" style="font-size: 50px">Model 2 was set up in a nearly identical way to Model 1, with one major excetpion, the use of randomized data. In Model 1, the file structure containing the Train, Test, and Validation Groups was created by hand. In Model 2, we used the computer to create the file structure, randomzing the pictures that were put into each of the Train, Validate, and Test Groups. By the randomizer, we are able to remove any potential any creator error or bias in selecting the pictures for each group. The primary difference and outcome of Model 2 are highlighted below.</p>
+    <br>
+    <br>
+    <ol>
+        <li style ="text-align:center" style="font-size: 50px"> Computer made file structure and randomized groupings.</li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/model2random.png" width="1200" height="700" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Model running on the Train and Validate Groups.</li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/model2running.png" width="1200" height="550" alt="" class= "center">
+            <br>
+            <br>
+        <li style ="text-align:center" style="font-size: 50px"> Visualization of Predictions using a Confusion Matrix. </li>
+            <br>
+            <br>
+            <img src="Resources/Other_images/ML_Site_Pictures/model2matrix.png" width="1200" height="700" alt="" class= "center">
+    </ol>
     <%- include('../partials/footer') %>
 </body>
 </html>
