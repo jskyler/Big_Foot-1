@@ -41,3 +41,7 @@ app.get('/machineLearning', function(req, res) {
 app.get('/overview', function(req, res) {
     res.render('pages/overview');
 });
+
+app.get('/moons', function(req, res) {
+    res.render('pages/moons');
+});
