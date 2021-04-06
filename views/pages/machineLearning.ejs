@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('../partials/head') %>
+    <title>Machine Learning: Image Classification Using CNN</title>
 </head>
 <body>
-    
+    <%- include('../partials/nav') %>
+    <h2 style="text-align:center"> Bigfoot vs. Man</h2>
+    <p style="margin-left: 40px">Our goal for this machine learning project was to build a Convolutional Neural Network with the ability to classify images as either representing Bigfoot or man. While this project uses a relatively small data set (1170 pictures), it represents a first step in the building of a larger model that could help Cyrptozoologists and Bigfoot enthusiasts determine the credibility of their bigfoot sightings.</p>
+    <h2 style="text-align:center"> The Data</h2>
+    <div class="col-md-12 text-success">
+        <h3>Picture Examples<img src="public/Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="50" height="50" alt=""><img src="public/Resources/Other_images/ML_Site_Pictures/manexample.png" width="50" height="50" alt=""></h3>
+    </div>
+    <ul>
+        <li>1170 pictures (585 of Bigfoot, 585 of man)</li>
+        <li>Pictures found using Google Image searches, Pinterest, and <a href = "http://www.bigfootreality.com/img/sasketch/bsp_main.php"> Bigfoot Reality </li> 
+        <li>Pictures were numbered sequentially as either bigfoot or man and saved as JPEG files (example: bigfoot1.jpg) </li>
+    </ul>
+    <h2 style="text-align:center"> The Model</h2>
+
+    <%- include('../partials/footer') %>
 </body>
 </html>
