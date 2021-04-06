@@ -8,3 +8,4 @@ For generations, stories of an eight-foot-tall creature walking on two legs, roa
 
 It was our goal to compile information and data from the leading Bigfoot experts at The Bigfoot Field Researchers Organization, and compare Bigfoot sightings from across America. Using Machine Learning and more specifically, a Convolutional Neural Network, we trained the program to classify images as either representing Bigfoot or man. While this project uses a relatively small image data set (1170 pictures), it represents a first step in the building of a larger model that could help Cryptozoologists and Bigfoot enthusiasts determine the credibility of their bigfoot sightings.
 
+The visualizations of our data can be found at: https://big-foot-rmj.herokuapp.com/
