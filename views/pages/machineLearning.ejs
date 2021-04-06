@@ -10,7 +10,7 @@
     <p style="margin-left: 40px">Our goal for this machine learning project was to build a Convolutional Neural Network with the ability to classify images as either representing Bigfoot or man. While this project uses a relatively small data set (1170 pictures), it represents a first step in the building of a larger model that could help Cyrptozoologists and Bigfoot enthusiasts determine the credibility of their bigfoot sightings.</p>
     <h2 style="text-align:center"> The Data</h2>
     <div class="col-md-12 text-success">
-        <h3>Picture Examples<img src="Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="50" height="50" alt=""><img src="public/Resources/Other_images/ML_Site_Pictures/manexample.png" width="50" height="50" alt=""></h3>
+        <img src="Resources/Other_images/ML_Site_Pictures/bigfootexample.png" width="400" height="300" alt=""><img src="Resources/Other_images/ML_Site_Pictures/manexample.png" width="400" height="300" alt="">
     </div>
     <ul>
         <li>1170 pictures (585 of Bigfoot, 585 of man)</li>
@@ -19,19 +19,23 @@
     </ul>
     <h2 style="text-align:center"> Model 1 Overview</h2>
     <ol>
-        <li> Create virtual environment with necessary dependencies </li>
+        <li> Create virtual environment with necessary dependencies. </li>
+            <img src="Resources/Other_images/ML_Site_Pictures/dependenciesexample.png" width="1200" height="400" alt="">
+        <li> Divide data into Train, Validate, and Test Groups and preprocess images.</li>
+            <img src="Resources/Other_images/ML_Site_Pictures/preprocessingimages.png" width="1200" height="300" alt="">
+        <li> Initial plot of a sample of images in the Train Group, showing how the computer begins to filter out layers of each picture.</li>
+            <img src="Resources/Other_images/ML_Site_Pictures/plotimages.png" width="1200" height="800" alt="">
+        <li> Build the model. </li>
         <div class="col-md-12 text-success">
-            <h3>Dependency Example<img src="Resources/Other_images/ML_Site_Pictures/dependenciesexample.png" width="50" height="50" alt=""></h3>
-        </div>
-        <li> Divide data into Train, Validate, and Test Groups and preprocess images</li>
-        <div class="col-md-12 text-success">
-            <h3>Preprocessing<img src="Resources/Other_images/ML_Site_Pictures/preprocessingimages.png" width="50" height="50" alt=""></h3>
-        </div>
-        <li> Initial plot of a sample of images, showing how the computer begins to filter out layers of each picture.</li>
-        <div class="col-md-12 text-success">
-            <h3>Plot of Images<img src="Resources/Other_images/ML_Site_Pictures/plotimages.png" width="50" height="50" alt=""></h3>
-        </div>
-        <li></li>
+            <img src="Resources/Other_images/ML_Site_Pictures/ModelBuilding.png" width="1200" height="600" alt="">
+        <li> Run the model on the Train and Validate Groups of Data. </li>
+            <img src="Resources/Other_images/ML_Site_Pictures/modelrun.png" width="1200" height="800" alt="">
+        <li> Plot sample of images in the Test Group.</li>
+            <img src="Resources/Other_images/ML_Site_Pictures/testgroup.png" width="1200" height="800" alt="">
+        <li> Make Predictions Using the Test Group. </li>
+            <img src="Resources/Other_images/ML_Site_Pictures/testpredictions.png" width="1200" height="600" alt="">
+        <li> Visualize Predictions using a Confusion Matrix.  </li>
+            <img src="Resources/Other_images/ML_Site_Pictures/confusionmatrix1.png" width="1200" height="800" alt="">
     </ol>
 
     <%- include('../partials/footer') %>
