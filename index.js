@@ -9,7 +9,6 @@ var app = express();
 
 var server = http.Server(app);
 
-//app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
@@ -37,4 +36,8 @@ app.get('/class', function(req, res) {
 
 app.get('/machineLearning', function(req, res) {
     res.render('pages/machineLearning');
+});
+
+app.get('/overview', function(req, res) {
+    res.render('pages/overview');
 });
